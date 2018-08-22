@@ -1,5 +1,9 @@
 ---
 applications:
- - name: GetStartedPHP
-   random-route: true
-   memory: 128M
+- name: wordpress
+  memory: 128M
+  path: .
+  route: wordpress-on.<app-domain>
+  buildpack: php_buildpack
+  services:
+  - wordpress-mysql-db
